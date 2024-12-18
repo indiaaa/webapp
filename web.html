@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Resume WebApp</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f9;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      color: #007BFF;
+    }
+
+    .header p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #007BFF;
+      border-bottom: 2px solid #007BFF;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .section ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .section ul li {
+      margin: 10px 0;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #007BFF;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .header h1 {
+        font-size: 1.5rem;
+      }
+
+      .section h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>John Doe</h1>
+      <p>Web Developer | UI/UX Designer | Problem Solver</p>
+    </div>
+
+    <div class="section">
+      <h2>About Me</h2>
+      <p>I am a passionate web developer with a love for building interactive and responsive websites. Always eager to learn and solve challenging problems.</p>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Frontend Developer</strong> - Tech Solutions (2021-Present)</li>
+        <li><strong>Intern</strong> - Creative Design Studio (2020-2021)</li>
+      </ul>
+    </div>
+
+    <div class="section skills">
+      <h2>Skills</h2>
+      <div>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>Figma</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: john.doe@example.com</li>
+        <li>Phone: +123-456-7890</li>
+        <li>Portfolio: <a href="https://example.com" target="_blank">example.com</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 John Doe. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript to add a feature - Toggle theme
+    const container = document.querySelector('.container');
+    const footer = document.querySelector('footer');
+
+    footer.innerHTML += `
+      <button id="theme-toggle" style="
+        background: #007BFF;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+      ">Toggle Theme</button>
+    `;
+
+    const button = document.getElementById('theme-toggle');
+    button.addEventListener('click', () => {
+      document.body.style.backgroundColor = 
+        document.body.style.backgroundColor === 'rgb(51, 51, 51)' ? '#f4f4f9' : '#333';
+      document.body.style.color = 
+        document.body.style.color === 'rgb(255, 255, 255)' ? '#333' : '#fff';
+    });
+  </script>
+</body>
+</html>
